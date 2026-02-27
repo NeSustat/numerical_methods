@@ -21,7 +21,7 @@ def absoluteError():
 def relativeError():
     return absoluteError() / abs(func())
 
-if __name__ == "__main__":
-    print("Function: ", func())
-    print("Absolute error: ", absoluteError())
-    print("Relative error: ", relativeError())
+
+print("Function: ", func())
+print("Absolute error: ", absoluteError())
+print("Relative error: ", relativeError())

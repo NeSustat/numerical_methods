@@ -31,10 +31,10 @@ public:
 
 class Task2{
 public:
-    const double x0 = 0.5;
+    const double x0 = 1.0;
     const double x = 1.02;
     const double dx = x - x0;
-    const double y0 = 0.5;
+    const double y0 = 1.0;
     const double y = 0.97;
     const double dy = y - y0;
 

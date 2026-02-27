@@ -50,23 +50,23 @@ class Task2:
         return (self.absolute_error() / self.func(self.x, self.y)) * 100
 
 
-if __name__ == "__main__":
-    task1 = Task1()
-    print("task 1:")
-    print(f"x0 = {task1.x0}")
-    print(f"x = {task1.x}")
-    print(f"dx = {task1.dx}")
-    print(f"A = {task1.func(80.5):.15f}")
-    print(f"a = {task1.a():.15f}")
-    print(f"Absolute error: {task1.absolute_error():.6f}")
-    print(f"Relative error: {task1.relative_error():.6f}%\n")
-    
-    task2 = Task2()
-    print("task 2:")
-    print(f"x0 = {task2.x0}, y0 = {task2.y0}")
-    print(f"x = {task2.x}, y = {task2.y}")
-    print(f"dx = {task2.dx}, dy = {task2.dy}")
-    print(f"A = {task2.func(task2.x, task2.y):.15f}")
-    print(f"a = {task2.a():.15f}")
-    print(f"Absolute error: {task2.absolute_error():.6f}")
-    print(f"Relative error: {task2.relative_error():.6f}%")
+
+task1 = Task1()
+print("task 1:")
+print(f"x0 = {task1.x0}")
+print(f"x = {task1.x}")
+print(f"dx = {task1.dx}")
+print(f"A = {task1.func(80.5):.15f}")
+print(f"a = {task1.a():.15f}")
+print(f"Absolute error: {task1.absolute_error():.6f}")
+print(f"Relative error: {task1.relative_error():.6f}%\n")
+
+task2 = Task2()
+print("task 2:")
+print(f"x0 = {task2.x0}, y0 = {task2.y0}")
+print(f"x = {task2.x}, y = {task2.y}")
+print(f"dx = {task2.dx}, dy = {task2.dy}")
+print(f"A = {task2.func(task2.x, task2.y):.15f}")
+print(f"a = {task2.a():.15f}")
+print(f"Absolute error: {task2.absolute_error():.6f}")
+print(f"Relative error: {task2.relative_error():.6f}%")
