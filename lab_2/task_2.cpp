@@ -55,7 +55,7 @@ void printCurX(double E){
     for (int i = 0; i < 4; i++){
         std::cout << curX[i] << " | ";
     }
-    std::cout << std::fixed << std::setprecision(5);
+    std::cout << std::fixed << std::setprecision(4);
     std::cout << E << "\n";
     std::cout << std::fixed << std::setprecision(15);
     k++;
@@ -67,7 +67,7 @@ void checkRes(){
         for (int j = 0; j < 4; j++){
             sigma += a[i][j] * curX[j];
         }
-        std::cout << "\nRes for " << i << " equation: " << sigma << " | " << "b_i = " << b[i] << " | dif = " << fabs(sigma - b[i]);
+        std::cout << "\nRes for " << i+1 << " equation: " << sigma << " | " << "b_i = " << b[i] << " | dif = " << fabs(sigma - b[i]);
         sigma = 0;
     }
 }
