@@ -60,7 +60,7 @@ double checkEnd(){
 void printCurX(double E){
     std::cout << "| " << k << " |";
     for (int i = 0; i < 4; i++){
-        std::cout << Xk1[i] << " | ";
+        std::cout << Xk2[i] << " | ";
     }
     std::cout << std::fixed << std::setprecision(4);
     std::cout << E << "\n";
@@ -122,6 +122,6 @@ int main(){
     for (double k : b){
         std::cout << k << " ";
     }
-    std::cout << "\n\n\nSIM\n";
+    std::cout << "\n\nJacodi\n";
     system("task2_cpp");
 }

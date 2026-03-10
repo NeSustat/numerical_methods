@@ -70,7 +70,6 @@ int main(){
     for (int i = 0; i < 4; i++){
         std::cout << b_copy[i] << " | " << a_copy[i][0] * x[0] + a_copy[i][1] * x[1] + a_copy[i][2] * x[2] + a_copy[i][3] * x[3] << std::endl;
     }
-
-    std::cout << "\n\nJacodi";
+    std::cout << "\n\nSIM\n";
     system("task3_cpp");
 }
