@@ -2,6 +2,7 @@
 #include <algorithm>
 #include <cmath>
 #include <iomanip>
+#include <cstdlib>
 
 // МПИ
 
@@ -34,7 +35,7 @@ double H[4][4] = {{0.1, 0, 0, 0},
                 {0, 0, 0.1, 0},
                 {0, 0, 0, 0.1}};
 
-// x1^(k+1) = b[0][0] * x1^(k) + b[1][0] * x2^(k) + ... + b[4][0] * x4^(k) + b[0]
+// x1^(k+1) = B[0][0] * x1^(k) + B[0][1] * x2^(k) + ... + B[0][3] * x4^(k) + d[0]
 
 void calculationsCurX(){
     for (int i = 0; i < 4; i++){
@@ -94,10 +95,21 @@ int main(){
             edMatrix[i][j] -= a[i][j];
         }
     }
+    std::cout << "B: \n";
+    for (auto& string : edMatrix){
+        double sigma = 0;
+        for (auto k : string){
+            sigma += k;
+            std::cout << k << " ";
+        }
+        std::cout << sigma << "\n";
+    }
+    std::cout << "\nd:\n";
+    for (auto k : b){
+        std::cout << k << " ";
+    }
     std::cout << std::fixed << std::setprecision(15);
-    std::cout << "| k |        x1        |         x2        |         x3        |         x4        | delta\n";
-    printCurX(checkEnd());
-    calculationsCurX();
+    std::cout << "\n| k |        x1        |         x2        |         x3        |         x4        | delta\n";
     printCurX(checkEnd());
     do {
         rewrite(); 
@@ -110,4 +122,6 @@ int main(){
     for (double k : b){
         std::cout << k << " ";
     }
+    std::cout << "\n\n\nSIM\n";
+    system("task2_cpp");
 }

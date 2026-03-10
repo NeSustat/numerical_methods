@@ -1,6 +1,7 @@
 #include <cmath>
 #include <iostream>
 #include <iomanip>
+#include <cstdlib>
 
 // Гаус
 
@@ -52,6 +53,7 @@ void resX(){
 
 
 int main(){
+    std::cout << "Gauss\n";
     compo(0);
     compo(1);
     compo(2);
@@ -63,9 +65,12 @@ int main(){
         std::cout << " | " << b[i] << std::endl;
     }
     std::cout << std::endl;
-    for (int i = 0; i < 4; i++) std::cout << std::setprecision(10) << x[i] << std::endl;
+    for (int i = 0; i < 4; i++) std::cout << std::setprecision(10) << "x_" << i+1 << " = " <<  x[i] << std::endl;
     std::cout << std::endl;
     for (int i = 0; i < 4; i++){
         std::cout << b_copy[i] << " | " << a_copy[i][0] * x[0] + a_copy[i][1] * x[1] + a_copy[i][2] * x[2] + a_copy[i][3] * x[3] << std::endl;
     }
+
+    std::cout << "\n\nJacodi";
+    system("task3_cpp");
 }

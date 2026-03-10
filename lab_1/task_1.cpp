@@ -34,5 +34,6 @@ int main(){
     std::cout << "Function value: " << func() << std::endl;
     std::cout << "Absolute error: " << absoluteError() << std::endl;
     std::cout << "Relative error: " << relativeError() << std::endl;
+    std::cout << df_dx() << " " << df_dy() << " " << df_dz() << std::endl;
     return 0;
 }

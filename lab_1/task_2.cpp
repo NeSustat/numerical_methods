@@ -82,6 +82,8 @@ int main(){
     std::cout << "dx = " << Task2.dx << std::endl;
     std::cout << "dy = " << Task2.dy << std::endl;
     std::cout << std::fixed << std::setprecision(15);
+    std::cout << Task2.df_d(1, 1) * Task2.dx << " " << Task2.df_d(1, 1) * Task2.dy << std::endl;
+    std::cout << Task2.func(1, 1) << " " << Task2.func(1.02, 0.97) << std::endl;
     std::cout << "A = " << Task2.func(Task2.x, Task2.y) << std::endl;
     std::cout << "a = " << Task2.a() << std::endl;
     std::cout << std::fixed << std::setprecision(6);
