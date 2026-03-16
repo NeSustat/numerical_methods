@@ -62,7 +62,7 @@ int main(){
     std::cout << "\nNewton's method\n";
     k = 0;
     x2 = (a + a+1) / 2.0;
-    if (f(x2) * d2f_dx2(x2) > 0){
+    if (f(x2) * d2f_dx2(x2) > 0 || 1){
         std::cout << "k|x                |delta\n";
         std::cout << std::fixed << std::setprecision(15);
         std::cout << k << "|"  << x2  << "|------" <<"\n";
