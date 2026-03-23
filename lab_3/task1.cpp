@@ -46,7 +46,7 @@ int main(){
     if (fabs(df_dx(a+1)) < 1){
         x2 = (a + a+1) / 2.0;
         std::cout << "k|x                |delta\n";
-        std::cout << std::fixed << std::setprecision(15);
+        std::cout << std::fixed << std::setprecision(25);
         std::cout << k << "|"  << x2  << "|------" <<"\n";
         do {
             x1 = x2;
@@ -62,7 +62,7 @@ int main(){
     std::cout << "\nNewton's method\n";
     k = 0;
     x2 = (a + a+1) / 2.0;
-    if (f(x2) * d2f_dx2(x2) > 0){
+    if (f(x2) * d2f_dx2(x2) > 0 || 1){
         std::cout << "k|x                |delta\n";
         std::cout << std::fixed << std::setprecision(15);
         std::cout << k << "|"  << x2  << "|------" <<"\n";
@@ -82,7 +82,7 @@ int main(){
     if (df_dx(a) * df_dx(a+1) > 0){
         x2 = (a + a+1) / 2.0;
         x1 = 0;
-        int buffer = 0;
+        double buffer = 0;
         std::cout << "k|x                |delta\n";
         std::cout << std::fixed << std::setprecision(15);
         std::cout << k << "|"  << x2  << "|------" <<"\n";

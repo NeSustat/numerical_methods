@@ -54,16 +54,17 @@ void resX(){
 
 int main(){
     std::cout << "Gauss\n";
-    compo(0);
-    compo(1);
-    compo(2);
-    resX();
-    for (int i = 0; i < 4; i++){
-        for (int j = 0; j < 4; j++){
-            std::cout << a[i][j] << " ";
+    for (int k = 0; k < 3; k++){
+        compo(k);
+        for (int i = 0; i < 4; i++){
+            for (int j = 0; j < 4; j++){
+                std::cout << a[i][j] << " ";
+            }
+            std::cout << " | " << b[i] << std::endl;
         }
-        std::cout << " | " << b[i] << std::endl;
+        std::cout << std::endl;
     }
+    resX();
     std::cout << std::endl;
     for (int i = 0; i < 4; i++) std::cout << std::setprecision(10) << "x_" << i+1 << " = " <<  x[i] << std::endl;
     std::cout << std::endl;
