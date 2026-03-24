@@ -67,7 +67,7 @@ double df2_dx1(double x1){
 
 int main(){
     std::cout << df1_dx1(x, y) << " = df1_dx1 " << df1_dx2(x, y) << " = df1_dx2\n";
-    std::cout << df2_dx1(x) << " = df2_dx1 + df2_dx2\n";
+    std::cout << df2_dx1(x) << " = df2_dx1 0 = df2_dx2\n";
     if (df1_dx1(x, y) + df2_dx1(x) < 1 && df1_dx2(x, y) < 1){
         std::cout << "Method simple iteration\n";
         std::cout << std::setprecision(10);
@@ -114,5 +114,5 @@ int main(){
             std::cout << k << "|   " << x << "   |   " << y << "|    " << std::max(fabs(x - x_prev), fabs(y - y_prev)) << "\n";
         } while (std::max(fabs(x - x_prev), fabs(y - y_prev)) > eps);
     }
-    
+
 }
