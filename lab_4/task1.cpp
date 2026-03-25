@@ -101,7 +101,7 @@ int main(){
 
         } while (std::max(fabs(x - x_prev), fabs(y - y_prev)) > eps);
     } 
-    std::cout << "\nN\n";
+    std::cout << "\nNewtons method\n";
     x = .5, y = .5;
     k = 0;
     if (1){
