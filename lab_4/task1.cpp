@@ -71,7 +71,7 @@ int main(){
     if (df1_dx1(x, y) + df2_dx1(x) < 1 && df1_dx2(x, y) < 1){
         std::cout << "Method simple iteration\n";
         std::cout << std::setprecision(10);
-        std::cout << "k|   x2   |  x2  |  delta \n";
+        std::cout << "k|   x1   |  x2  |  delta \n";
         std::cout << k << "|   " << x << "   |   " << y << "|    " << std::max(fabs(x - x_prev), fabs(y - y_prev)) << "\n";
         do {
             x_prev = x;
@@ -83,12 +83,12 @@ int main(){
 
         } while (std::max(fabs(x - x_prev), fabs(y - y_prev)) > eps);
 
-        std::cout << "\n\nMethod Zeimana\n";
+        std::cout << "\n\nMethod Seidel\n";
         k = 0;
         x = .5, y = .5;
         x_prev = .5, y_prev = .5;
         std::cout << std::setprecision(10);
-        std::cout << "k|   x2   |  x2  |  delta \n";
+        std::cout << "k|   x1   |  x2  |  delta \n";
         std::cout << k << "|   " << x << "   |   " << y << "|    " << std::max(fabs(x - x_prev), fabs(y - y_prev)) << "\n";
     
         do {
@@ -101,7 +101,7 @@ int main(){
 
         } while (std::max(fabs(x - x_prev), fabs(y - y_prev)) > eps);
     } 
-    std::cout << "\nNewtons method\n";
+    std::cout << "\nNewton's method\n";
     x = .5, y = .5;
     k = 0;
     if (1){

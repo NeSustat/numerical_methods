@@ -1,12 +1,11 @@
-#include <iostream>
-#include <iomanip>
-#include <cmath>
+#include <stdio.h>
 
-const int N = 5;
+#define N 5
+
 double X[N] = {0.351, 0.867, 1.315, 2.013, 2.859};
 double Y[N] = {0.605, 0.218, 0.205, 1.157, 5.092};
+double dd[N][N];
 
-// Лагранж
 double l(int i, double x) {
     double a = 1, b = 1;
     for (int j = 0; j < N; j++) {
@@ -23,9 +22,6 @@ double L(double x) {
     for (int i = 0; i < N; i++) a += l(i, x);
     return a;
 }
-
-// Ньютон (разделённые разности)
-double dd[N][N]; // divided differences table
 
 void buildNewton() {
     for (int i = 0; i < N; i++) dd[i][0] = Y[i];
@@ -46,13 +42,13 @@ double Newton(double x) {
 
 int main() {
     buildNewton();
-    double x = X[0] + X[1]; // 0.351 + 0.867 = 1.218
+    double x = X[0] + X[1];
 
-    std::cout << std::fixed << std::setprecision(6);
-    std::cout << "========================================\n";
-    std::cout << "  Interpolation at point x = " << x << "\n";
-    std::cout << "========================================\n";
-    std::cout << "  Lagrange L(x) = " << L(x)      << "\n";
-    std::cout << "  Newton  N(x) = " << Newton(x) << "\n";
-    std::cout << "========================================\n";
+    printf("========================================\n");
+    printf("  Interpolation at point x = %.6f\n", x);
+    printf("========================================\n");
+    printf("  Lagrange L(x) = %.6f\n", L(x));
+    printf("  Newton  N(x) = %.6f\n", Newton(x));
+    printf("========================================\n");
+    return 0;
 }
