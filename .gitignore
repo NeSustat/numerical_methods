@@ -1,2 +1,6 @@
 *.class
 *.exe
+*.js
+*.json
+*.docx
+*/node_modules
